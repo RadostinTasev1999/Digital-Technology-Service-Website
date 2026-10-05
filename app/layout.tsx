@@ -5,7 +5,6 @@ import {navItems} from '@/lib/placeholderdata'
 import { navActionData } from "@/lib/placeholderdata";
 
 
-
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
