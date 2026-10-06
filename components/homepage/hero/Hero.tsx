@@ -15,8 +15,9 @@ export default function AppHero({
     heroBtn1,
     heroBtn2,
     heroLogoCard,
-    heroServiceCard,
-    heroLongCard
+    heroServiceCards,
+    heroLongCard,
+    heroStatistics
 }: AppHeroData) {
 
     return (
@@ -61,15 +62,16 @@ export default function AppHero({
                         <HeroLogoCard 
                             heroLogoCard={heroLogoCard}
                             />
-                        {/* Technical Support Card */}
-                        <HeroServiceCard 
-                            heroServiceCard={heroServiceCard}
-                            />
-                        {/* Technical Support Card */}
-                        <HeroServiceCard 
-                            heroServiceCard={heroServiceCard}
-                            />
-                        {/* <HeroServiceCard /> */}
+                        
+                        {
+                            heroServiceCards.map((card) => (
+                                <HeroServiceCard
+                                    key={card.id}
+                                    heroServiceCard={card}
+                                    />
+                            ))
+                        }
+
                         {/* Long Card */}
                         <HeroLongCard 
                             heroLongCard={heroLongCard}
@@ -78,6 +80,22 @@ export default function AppHero({
                     </div>
 
                 </div>
+            </div>
+            {/* Hero Statistics */}
+            <div 
+                id="hero-statistics"
+                className='grid grid-cols-2 gap-x-8 gap-y-8 border-t border-b border-slate-400 py-8 px-4 mb-4 mx-auto max-w-7xl md:grid-cols-4'
+                >
+                    {
+                        heroStatistics.map((stat) => (
+                            <div id="stat-item" key={stat.id} className="flex flex-col gap-2">
+                                <strong className="text-3xl/1 font-extrabold bg-clip-text tracking-[0.03em] basis-full">
+                                    <span className="text-4xl font-semibold text-green-600 tracking-tight">{stat.stat}</span>
+                                </strong>
+                                <span className="text-sm text-slate-600 basis-full max-w-[12rem] leading-5">{stat.text}</span>
+                            </div>
+                        ))
+                    }
             </div>
         </section>
     )
