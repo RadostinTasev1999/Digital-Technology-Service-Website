@@ -4,7 +4,7 @@ export default function HeroLongCard({
     heroLongCard
 }: HeroLongCardData) {
     return(
-        <div className="w-full rounded-2xl border border-slate-300 p-5 backdrop-blur shadow-md">
+        <div className="min-w-64 w-full rounded-2xl border border-slate-300 p-5 backdrop-blur shadow-md">
             <div className="flex items-center justify-between">
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg ">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">

@@ -56,7 +56,7 @@ export default function AppHero({
                         />
                 </div>
                 {/* Right side */}
-                <div className="relative">
+                <div id='right-column' className="relative">
                     <div className="flex flex-wrap gap-4">
                         {/* Business logo card */}
                         <HeroLogoCard 
@@ -84,7 +84,7 @@ export default function AppHero({
             {/* Hero Statistics */}
             <div 
                 id="hero-statistics"
-                className='grid grid-cols-2 gap-x-8 gap-y-8 border-t border-b border-slate-400 py-8 px-4 mb-4 mx-auto max-w-7xl md:grid-cols-4'
+                className='grid grid-cols-2 gap-x-8 gap-y-8  py-8 px-4 border-t-3 border-b-3 border-slate-300  mb-4 mx-auto max-w-7xl md:px-8 md:grid-cols-4'
                 >
                     {
                         heroStatistics.map((stat) => (

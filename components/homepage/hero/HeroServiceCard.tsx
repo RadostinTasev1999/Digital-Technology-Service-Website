@@ -6,7 +6,7 @@ export default function HeroServiceCard({
 
     return(
         <div
-            className="min-w-0 flex-1 rounded-2xl border border-slate-300 p-5 backdrop-blur shadow-sm"
+            className="min-w-32 flex-1 flex flex-col rounded-2xl border border-slate-300 p-5 backdrop-blur shadow-sm"
         >
             <div className="flex items-center justify-between">
                 <span

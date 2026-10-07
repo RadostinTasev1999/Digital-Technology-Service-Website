@@ -7,14 +7,14 @@ export default function HeroLogoCard({
 
     return(
         <div
-            className="w-full flex items-center gap-4 rounded-2xl border border-slate-300 p-5 backdrop-blur shadow-md"
+            className="min-w-64 w-full flex items-center gap-4 rounded-2xl border border-slate-300 p-5 backdrop-blur shadow-md"
         >
             {/* Logo Image */}
             <div className="rounded-xl p-3">
                 <Image
                     alt="Pamteks94"
-                    className="h-10 w-auto"
-                    width={200}
+                    className="h-10 min-w-[50px]"
+                    width={50}
                     height={200}
                     src="/hardware-detect-svgrepo-com.svg"
                 >
@@ -22,7 +22,7 @@ export default function HeroLogoCard({
                 </Image>
             </div>
             {/*  */}
-            <div>
+            <div className="">
                 <div className="text-xs uppercase tracking-wider text-green-600">
                     {heroLogoCard.heading}
                 </div>
