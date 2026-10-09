@@ -1,13 +1,16 @@
-import ServiceDetails from '@/components/servicepage/laptops/ServiceDetails'
-import LaptopIntro from '@/components/servicepage/laptops/ServiceHero'
-import ServiceDescription from '@/components/servicepage/laptops/ServiceDescription'
+import ServiceDetails from '@/components/servicepage/ServiceDetails'
+import ServiceHero from '@/components/servicepage/ServiceHero'
+import ServiceDescription from '@/components/servicepage/ServiceDescription'
 
-import ServiceFaq from '@/components/servicepage/laptops/ServiceFaq'
+
+import ServiceFaq from '@/components/servicepage/ServiceFaq'
 
 import {laptopIntroData} from '@/lib/placeholderdata'
 import { laptopServiceDesc } from '@/lib/placeholderdata'
 import { laptopServiceDetailsL } from '@/lib/placeholderdata'
 import { laptopServiceDetailsR } from '@/lib/placeholderdata'
+import { laptopServiceFaqHeading } from '@/lib/placeholderdata'
+import { laptopFaqList } from '@/lib/placeholderdata'
 
 
 
@@ -16,20 +19,23 @@ export default function LaptopService() {
     return(
         <>
         {/* Intro Section*/}
-        <LaptopIntro
-            laptopIntroData={laptopIntroData}
+        <ServiceHero
+            heroData={laptopIntroData}
             />
         {/* Description Section */}
         <ServiceDescription 
-            laptopServiceDesc={laptopServiceDesc}
+            heroServiceDesc={laptopServiceDesc}
             />
         {/* Sevice Details Section */}
         <ServiceDetails
-            laptopServiceDetailsL={laptopServiceDetailsL}
-            laptopServiceDetailsR={laptopServiceDetailsR}
+            serviceDetailsL={laptopServiceDetailsL}
+            serviceDetailsR={laptopServiceDetailsR}
             />
         {/* FAQ Section */}
         <ServiceFaq
+           label={laptopServiceFaqHeading.label}
+           heading={laptopServiceFaqHeading.heading}
+           serviceFaqList={laptopFaqList}
             />
         </>
     )
