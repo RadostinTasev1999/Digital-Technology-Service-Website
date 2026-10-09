@@ -35,6 +35,7 @@ export default function AppServiceInfo({
                                     heading={card.heading}
                                     text={card.text}
                                     detailsText={card.detailsText}
+                                    url={card.url}
                                     />
                             ))
                         }
