@@ -5,6 +5,7 @@ import HeroCtaButtons from '@/components/homepage/hero/HeroCta'
 import HeroLogoCard from '@/components/homepage/hero/HeroLogoCard'
 import HeroServiceCard from '@/components/homepage/hero/HeroServiceCard'
 import HeroLongCard from '@/components/homepage/hero/HeroLongCard'
+import HeroStatistics from '@/components/homepage/hero/HeroStatistics'
 
 import { AppHeroData } from '@/lib/definitions'
 
@@ -82,7 +83,16 @@ export default function AppHero({
                 </div>
             </div>
             {/* Hero Statistics */}
-            <div 
+            <HeroStatistics
+                heroStatistics={heroStatistics}
+                    />
+            
+        </section>
+    )
+}
+
+/*
+    <div 
                 id="hero-statistics"
                 className='grid grid-cols-2 gap-x-8 gap-y-8  py-8 px-4 border-t-3 border-b-3 border-slate-300  mb-4 mx-auto max-w-7xl md:px-8 md:grid-cols-4'
                 >
@@ -97,6 +107,4 @@ export default function AppHero({
                         ))
                     }
             </div>
-        </section>
-    )
-}
+*/
