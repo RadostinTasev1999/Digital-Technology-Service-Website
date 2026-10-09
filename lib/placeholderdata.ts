@@ -104,7 +104,8 @@ export const serviceCardData = [
         arrowIcon: ArrowIcon,
         heading: 'Ремонт на лаптопи',
         text: 'Хардуерни проблеми, прегряване, дисплеи, профилактика',
-        detailsText: 'Научете повече'
+        detailsText: 'Научете повече',
+        url: '/service/laptops'
     },
     {
         id:2,
@@ -112,7 +113,8 @@ export const serviceCardData = [
         arrowIcon: ArrowIcon,
         heading: 'Ремонт на монитори',
         text: 'Хардуерни проблеми, прегряване, дисплеи, профилактика',
-        detailsText: 'Научете повече'
+        detailsText: 'Научете повече',
+        url: '/service/monitors'
     },
     {
         id:3,
@@ -120,7 +122,8 @@ export const serviceCardData = [
         arrowIcon: ArrowIcon,
         heading: 'Ремонт на телевизори',
         text: 'Ремонт на LED / LCD телевизори',
-        detailsText: 'Научете повече'
+        detailsText: 'Научете повече',
+        url: '/service/television'
     },
     {
         id:4,
@@ -128,7 +131,8 @@ export const serviceCardData = [
         arrowIcon: ArrowIcon,
         heading: 'Ремонт на Аудио Техника',
         text: 'CD плеъри, класически усилватели, тонколони, Автомобилни говорители и субуфери',
-        detailsText: 'Научете повече'
+        detailsText: 'Научете повече',
+        url: '/service/audio'
     },
     {
         id:5,
@@ -136,6 +140,92 @@ export const serviceCardData = [
         arrowIcon: ArrowIcon,
         heading: 'Ремонт на Видео Техника',
         text: 'DVD плейъри',
-        detailsText: 'Научете повече'
+        detailsText: 'Научете повече',
+        url: '/service/video'
     }
 ]
+
+export const laptopIntroData = {
+    navLinks: {
+        homeUrl: '/',
+        serviceUrl: '/service',
+        serviceLaptopUrl: '/service/laptops'
+
+    },
+    navText: {
+        home: 'Начало',
+        service: 'Услуги',
+        serviceLaptop: 'Ремонт на лаптоп'
+    },
+    text: {
+        badge: 'Услуга',
+        heading: 'Ремонт на лаптопи',
+        description: 'Памтекс 94 ООД извършва ремонт и диагностика на лаптопи за частни клиенти и малки бизнеси в София. Работим върху хардуерни проблеми - батерия, охлаждане, дисплей, клавиатура. Преди извършване на ремонт, правим диагностика и информираме в детайли вариантите за ремонт.'
+    },
+    btnPrimary: {
+        url: "/",
+        text: 'Направи запитване'
+    },
+    btnSecondary: {
+        url: "/",
+        text: '0897818149'
+    }
+}
+
+export const laptopServiceDesc = {
+    heading: {
+        label: 'Какво представлява услугата',
+        headingText: 'Кога да изберете тази услуга'
+    },
+    description: {
+        text: 'Бавен или прегряващ лаптоп, проблеми с батерията, повреден екран или клавиатура спират работата и забавят ежедневните задачи. Качествената диагностика спестява разходи и често връща устройството в нормално състояние.'
+    }
+}
+
+export const laptopServiceDetailsL = {
+    heading: "Какво включва услугата",
+    listItems: [
+        {
+            id:1,
+            text: 'Диагностика на хардуерни проблеми'
+        },
+        {
+            id:2,
+            text: 'Решаване на бавна работа и забивания'
+        },
+        {
+            id:3,
+            text: 'Почистване от прах и подмяна на термопаста'
+        },
+        {
+            id:4,
+            text: 'Подмяна на батерия и зарядно'
+        },
+        {
+            id:5,
+            text: 'Проверка на твърд диск и SSD'
+        },
+    ]
+}
+
+export const laptopServiceDetailsR = {
+    heading: "За кого е подходящо",
+    listItems: [
+        {
+            id:1,
+            text: 'Частни клиенти с домашен или работен лаптоп'
+        },
+        {
+            id:2,
+            text: 'Офиси с фирмени лаптопи'
+        },
+        {
+            id:3,
+            text: 'Фрийлансъри и хора, работещи от вкъщи'
+        },
+        {
+            id:4,
+            text: 'Клиенти с по-стари лаптопи, нуждаещи се от ускорение'
+        }
+    ]
+}
