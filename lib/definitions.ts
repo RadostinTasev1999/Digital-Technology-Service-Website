@@ -109,7 +109,8 @@ type ServiceCardData = {
     arrowIcon: React.FC,
     heading: string,
     text: string,
-    detailsText: string
+    detailsText: string,
+    url?: string
 }[]
 
 export type AppServiceCardData = {
@@ -117,7 +118,8 @@ export type AppServiceCardData = {
     ArrowIcon: JSX.Element,
     heading: string,
     text: string,
-    detailsText:string
+    detailsText:string,
+    url?:string
 }
 
 export type SectionHeaderData = {
@@ -137,4 +139,125 @@ export type ChevronData = {
 
 export type SvgData = {
     size?: string
+}
+
+export type HeroStatisticsData = {
+    heroStatistics: HeroStatistics
+}
+
+
+type HeroStatistics = {
+        id: number,
+        text: string,
+        stat: string
+}[]
+
+export type HeroStatItemData = {
+        id: number,
+        text: string,
+        stat: string
+}
+
+export type LaptopServiceHero = {
+    laptopIntroData: LaptopIntroData
+}
+
+type LaptopIntroData = {
+    navLinks: NavLinks,
+    navText: NavText,
+    text: LaptopHeroText,
+    btnPrimary: LaptopHeroBtnData,
+    btnSecondary: LaptopHeroBtnData
+}
+
+type NavText = {
+    home: string,
+    service: string,
+    serviceLaptop: string
+}
+
+type NavLinks = {
+    homeUrl: string,
+    serviceUrl: string,
+    serviceLaptopUrl: string
+}
+
+type LaptopHeroText = {
+    badge: string,
+    heading: string,
+    description: string
+}
+type LaptopHeroBtnData = {
+    url: string,
+    text: string
+}
+
+export type LaptopMiniNavData = {
+    navLinks: NavLinks,
+    navText: NavText
+}
+
+export type LaptopHeadingData = {
+    badge: string,
+    heading: string,
+    description: string
+}
+
+export type LaptopCta = {
+    btnPrimary: LaptopHeroBtnData,
+    btnSecondary: LaptopHeroBtnData
+}
+
+
+export type LaptopServiceDescData = {
+    laptopServiceDesc: LaptopServiceDesc
+}
+
+type LaptopServiceDesc = {
+    heading: LaptopServiceDescHeading,
+    description: LaptopServiceDescText
+}
+
+type LaptopServiceDescHeading = {
+    label: string,
+    headingText: string
+}
+
+type LaptopServiceDescText = {
+    text: string
+}
+
+export type LaptopServiceDescLeft = {
+    heading: LaptopServiceDescHeading
+}
+
+export type LaptopServiceDescRight = {
+    description: LaptopServiceDescText
+}
+
+export type ServiceDetailsData = {
+    laptopServiceDetailsL: LaptopServiceDetails,
+    laptopServiceDetailsR: LaptopServiceDetails
+}
+
+type LaptopServiceDetails = {
+    heading: string,
+    listItems: LaptopServiceDetailsItems
+}
+
+type LaptopServiceDetailsItems = {
+    id: number,
+    text:string
+}[]
+
+export type LaptopServiceDetailsL = {
+    laptopServiceDetailsL: LaptopServiceDetails
+}
+
+export type LaptopServiceDetailsItem = {
+    text: string
+}
+
+export type LaptopServiceDetailsR = {
+    laptopServiceDetailsR: LaptopServiceDetails
 }
