@@ -31,7 +31,7 @@ export default function AppHeader({
 
     return (
         <header
-            className="fixed top-0 right-0 left-0 z-50 w-full transition-all border-b border-slate-300 backdrop-blur-lg"
+            className="fixed top-0 right-0 left-0 z-50 w-full transition-all border-b border-slate-300 bg-white/80 backdrop-blur-lg"
             >
             <div id="main-container" className="mx-auto flex h-19 max-w-7xl items-center justify-between gap-6 px-4 lg:px-8">
                 {/* Logo */}

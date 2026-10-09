@@ -5,7 +5,7 @@ export default function AppFooter() {
 
 
     return (
-        <footer className="bottom-0 left-0 right-0 w-full border border-top border-slate-300 bg-sky-50"> 
+        <footer className="bottom-0 left-0 right-0 w-full border border-top border-slate-300 bg-slate-50"> 
             <div id="container" className="mx-auto max-w-7xl px-4 py-12 lg:px-8">
                 {/* Main footer content */}
                 <div className="flex flex-col  justify-between md:flex-row">
