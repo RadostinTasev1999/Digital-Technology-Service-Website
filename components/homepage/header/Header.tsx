@@ -41,7 +41,7 @@ export default function AppHeader({
                     <ul className="flex items-center gap-3">
                         {
                             navItems.map((item) => (
-                                <NavItem key={item.id} item={item.name} />
+                                <NavItem key={item.id} item={item.name} url={item.url}/>
                             ))
                         }
                     </ul>
@@ -67,7 +67,7 @@ export default function AppHeader({
                             <ul className="space-y-1">
                                 {
                                     navItems.map((item) => (
-                                        <MobileListItems key={item.id} item={item.name} />
+                                        <MobileListItems key={item.id} item={item.name} url={item.url}/>
                                     ))
                                 }
                             </ul>
