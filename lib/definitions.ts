@@ -8,11 +8,13 @@ export type NavList = {
 
 type NavItems = {
     id: number,
-    name: string
+    name: string,
+    url: string
 }[]
 
 export type ItemName = {
-    item: string
+    item: string,
+    url: string
 }
 
 export type ActionItems = {
@@ -33,8 +35,14 @@ export type AppHeroData = {
     heroBtn2: string
     heroLogoCard: HeroLogoCard
     heroServiceCards: HeroCardInfo
-    heroLongCard: HeroCardInfo,
+    heroLongCard: HeroLongCard,
     heroStatistics: HeroStats
+}
+
+type HeroLongCard = {
+    status: string,
+    service: string,
+    serviceInfo: string
 }
 
 type HeroStats = {
@@ -93,7 +101,7 @@ export type HeroServiceCardData = {
 }
 
 export type HeroLongCardData = {
-    heroLongCard: HeroCardInfo
+    heroLongCard: HeroLongCard
 }
 
 export type AppServiceData = {
@@ -282,4 +290,46 @@ type LaptopFaqList = {
 export type ServiceFaqItems = {
     question: string,
     answer: string
+}
+
+export type ContactsHeroData = {
+    contactsIntroData: ContactsIntroData
+}
+
+type ContactsIntroData = {
+    text: ContactsHeroText,
+    btnPrimary: BtnData,
+    btnSecondary: BtnData
+}
+
+type ContactsHeroText = {
+    badge: string,
+    heading: string,
+    description: string
+}
+
+type BtnData = {
+    url: string,
+    text: string
+}
+
+export type AppFooterData = {
+    footerData: FooterData
+}
+
+type FooterData = {
+    aboutText: string,
+    contactHeading: string,
+    contactList: ContactList
+}
+
+type ContactList = {
+    id: number,
+    icon: React.FC,
+    text: string
+}[]
+
+export type FooterListData = {
+    text: string,
+    Icon: JSX.Element
 }
