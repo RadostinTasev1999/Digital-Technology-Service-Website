@@ -3,6 +3,7 @@ import ServiceDescription from '@/components/servicepage/ServiceDescription'
 import ServiceDetails from "@/components/servicepage/ServiceDetails"
 import ServiceFaq from '@/components/servicepage/ServiceFaq'
 
+import { Divider } from 'rsuite'
 
 import {tvIntroData} from '@/lib/placeholderdata'
 import { tvServiceDesc } from '@/lib/placeholderdata'
@@ -19,11 +20,15 @@ export default function TelevisionService() {
             heroData={tvIntroData}
             />
 
+        <Divider size="sm" color="#9ac4c6"/>
+
         {/* Description Section */}
 
         <ServiceDescription
             heroServiceDesc={tvServiceDesc}
             />
+
+        <Divider size="sm" color="#9ac4c6"/>
 
         {/* ServiceDetails */}
 
@@ -31,6 +36,8 @@ export default function TelevisionService() {
             serviceDetailsL={tvServiceDetailsL}
             serviceDetailsR={tvServiceDetailsR}
             />
+
+        <Divider size="sm" color="#9ac4c6"/>
 
         {/* ServiceFaq */}
         <ServiceFaq
