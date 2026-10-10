@@ -2,6 +2,7 @@ import ServiceDetails from '@/components/servicepage/ServiceDetails'
 import ServiceHero from '@/components/servicepage/ServiceHero'
 import ServiceDescription from '@/components/servicepage/ServiceDescription'
 
+import { Divider } from 'rsuite'
 
 import ServiceFaq from '@/components/servicepage/ServiceFaq'
 
@@ -22,15 +23,21 @@ export default function LaptopService() {
         <ServiceHero
             heroData={laptopIntroData}
             />
+
+        <Divider size="sm" color="#9ac4c6"/>
         {/* Description Section */}
         <ServiceDescription 
             heroServiceDesc={laptopServiceDesc}
             />
+
+        <Divider size="sm" color="#9ac4c6"/>
         {/* Sevice Details Section */}
         <ServiceDetails
             serviceDetailsL={laptopServiceDetailsL}
             serviceDetailsR={laptopServiceDetailsR}
             />
+
+        <Divider size="sm" color="#9ac4c6"/>
         {/* FAQ Section */}
         <ServiceFaq
            label={laptopServiceFaqHeading.label}
