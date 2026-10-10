@@ -1,8 +1,14 @@
-import "./globals.css";
+import 'rsuite/dist/rsuite-no-reset.min.css'
+
+import "./globals.css"; 
+
+import { CustomProvider } from 'rsuite';
+
 import AppHeader from '@/components/homepage/header/Header'
 import AppFooter from "@/components/homepage/footer/Footer";
 import {navItems} from '@/lib/placeholderdata'
 import { navActionData } from "@/lib/placeholderdata";
+import {footerData} from '@/lib/placeholderdata'
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
@@ -17,10 +23,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           text={navActionData.text}
           />
         <main className="min-h-screen bg-cover bg-center bg-[url(/Gemini_Generated_Image_yj8ifuyj8ifuyj8i.jpg)] bg-fixed">
-        {children}
+        <CustomProvider>
+          {children}
+        </CustomProvider>
+        
         </main>
         {/* Footer */}
-        <AppFooter />
+        <AppFooter 
+          footerData={footerData}
+          />
       </body>
       
     </html>
