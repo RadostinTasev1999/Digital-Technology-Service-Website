@@ -4,24 +4,31 @@ import TvIcon from '@/components/ui/TvIcon'
 import ArrowIcon from '@/components/ui/ArrowIcon'
 import AudioIcon from '@/components/ui/AudioIcon'
 import VideoIcon from '@/components/ui/VideoIcon'
-
+import MapPinIcon from '@/components/ui/MapPinIcon'
+import PhoneIcon from '@/components/ui/PhoneIcon'
+import MailIcon from '@/components/ui/MailIcon'
+import { url } from 'inspector'
 
 export const navItems = [
     {
         id:1,
-        name: 'Начало'
+        name: 'Начало',
+        url: '/'
     },
     {
         id:2,
-        name: 'Услуги'
+        name: 'Услуги',
+        url: '/'
     },
     {
         id:3,
-        name: 'Сервиз'
+        name: 'Контакти',
+        url: '/contacts'
     },
     {
         id:4,
-        name: 'Контакти'
+        name: 'Сервиз',
+        url: '/'
     }
 ]
 
@@ -380,3 +387,43 @@ export const tvFaqList = [
         answer: 'Обикновено между час и два, в зависимост от проблема.'
     }
 ]
+
+export const contactsIntroData = {
+    text: {
+        badge: 'Контакти',
+        heading: 'Свържете се с Памтекс 94 ООД',
+        description: 'Опишете накратко техническият проблем . Ще се свържем с вас и ще предложим следваща стъпка'
+    },
+    btnPrimary: {
+        url: "/",
+        text: 'Направи запитване'
+    },
+    btnSecondary: {
+        url: "/",
+        text: '0897818149'
+    }
+}
+
+
+export const footerData = {
+    aboutText: "Телевизионен Сервиз Памтекс 94 ЕООД - Ремонт и Диагностика на ТВ, Аудио и Видео системи.",
+    contactHeading: "Контакти",
+    contactList: [
+        {
+            id:1,
+            icon: MapPinIcon,
+            text: "гр.София пл. Преображение, кв. Захарна фабрика"
+        },
+        {
+            id:2,
+            icon: PhoneIcon,
+            text: "0897818149"
+        },
+        {
+            id:3,
+            icon: MailIcon,
+            text: "pamteks94@gmail.com"
+        },
+
+    ]
+}
