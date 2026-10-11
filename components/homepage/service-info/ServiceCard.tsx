@@ -15,7 +15,7 @@ export default function AppServiceCard({
     return(
         <Link
             href={url || ''}
-            className="flex h-full flex-col rounded-2xl border border-slate-300 backdrop-blur-sm p-6 shadow-md transition duration-200 ease-in-out hover:-translate-y-2 hover:border-green-700"
+            className="flex h-full flex-col rounded-2xl border border-slate-300 backdrop-blur-md bg-white/30 p-6 shadow-md transition duration-200 ease-in-out hover:-translate-y-2 hover:border-green-700"
         >
             <span
                 className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl text-green-600 bg-slate-100 border border-slate-300"
