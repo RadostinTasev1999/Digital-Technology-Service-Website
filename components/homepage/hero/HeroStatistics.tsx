@@ -9,7 +9,7 @@ export default function HeroStatistics({
     return (
         <section
             id='hero-statistics'
-            className='py-16 border-b-2 border-t-2 border-slate-300 md:py-20'
+            className='py-16 md:py-20'
         >
             <div
                 id='container'
