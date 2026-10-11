@@ -7,6 +7,8 @@ import HeroServiceCard from '@/components/homepage/hero/HeroServiceCard'
 import HeroLongCard from '@/components/homepage/hero/HeroLongCard'
 import HeroStatistics from '@/components/homepage/hero/HeroStatistics'
 
+import { Divider } from 'rsuite'
+
 import { AppHeroData } from '@/lib/definitions'
 
 export default function AppHero({
@@ -82,29 +84,14 @@ export default function AppHero({
 
                 </div>
             </div>
+            {/* Divider */}
+            <Divider size="sm" color="#9ac4c6"/>
             {/* Hero Statistics */}
             <HeroStatistics
                 heroStatistics={heroStatistics}
                     />
-            
+            {/* Divider */}
+            <Divider size="sm" color="#9ac4c6"/>
         </section>
     )
 }
-
-/*
-    <div 
-                id="hero-statistics"
-                className='grid grid-cols-2 gap-x-8 gap-y-8  py-8 px-4 border-t-3 border-b-3 border-slate-300  mb-4 mx-auto max-w-7xl md:px-8 md:grid-cols-4'
-                >
-                    {
-                        heroStatistics.map((stat) => (
-                            <div id="stat-item" key={stat.id} className="flex flex-col gap-2">
-                                <strong className="text-3xl/1 font-extrabold bg-clip-text tracking-[0.03em] basis-full">
-                                    <span className="text-4xl font-semibold text-green-600 tracking-tight">{stat.stat}</span>
-                                </strong>
-                                <span className="text-sm text-slate-600 basis-full max-w-[12rem] leading-5">{stat.text}</span>
-                            </div>
-                        ))
-                    }
-            </div>
-*/
