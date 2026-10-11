@@ -8,7 +8,7 @@ export default function HeroStatItem({
 }: HeroStatItemData){
 
     return(
-        <div className={`text-center md:px-8 ${id > 1 ? 'md:border-l-2 md:border-slate-300' : ''}`}>
+        <div className={`text-center md:px-8 ${id > 1 ? 'md:border-l md:border-slate-400' : ''}`}>
             <div className='text-4xl font-bold tabular-nums text-green-700 mb-3'>
                 {stat}
             </div>
