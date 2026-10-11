@@ -12,11 +12,11 @@ export default function ServiceHeading({
                 {serviceBadge}
             </div>
 
-            <h1 className="max-w-4xl text-balance text-4xl font-black leading-tight md:text-5xl lg:text-6xl">
+            <h1 className="max-w-3xl text-balance text-4xl font-black leading-tight md:text-5xl">
                 {serviceHeading}
             </h1>
 
-            <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-600">
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-600">
                 {serviceDescription}
             </p>
         </>
