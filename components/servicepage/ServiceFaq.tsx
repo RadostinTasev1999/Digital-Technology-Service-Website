@@ -15,7 +15,7 @@ export default function ServiceFaq({
         <section
             id="faq-section"
             >
-            <div className="m-auto max-w-7xl px-4 py-16 border-t-2 border-slate-300 lg:px-8 lg:py-24">
+            <div className="m-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-24">
                 {/* Two column layout */}
                 <div className="grid gap-10 md:grid-cols-[1fr_1.6fr] md:items-start">
                     {/* Left column */}
