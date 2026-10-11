@@ -7,7 +7,7 @@ export default function HeroLogoCard({
 
     return(
         <div
-            className="min-w-64 w-full flex items-center gap-4 rounded-2xl border border-slate-300 p-5 backdrop-blur shadow-md"
+            className="min-w-64 w-full flex items-center gap-4 rounded-2xl border border-slate-300 p-5 backdrop-blur-md bg-white/30 shadow-md"
         >
             {/* Logo Image */}
             <div className="rounded-xl p-3">
