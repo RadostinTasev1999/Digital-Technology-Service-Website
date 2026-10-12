@@ -1,6 +1,7 @@
 import PhoneIcon from '@/components/ui/PhoneIcon'
 import MailIcon from '@/components/ui/MailIcon'
 import MapPinIcon from '@/components/ui/MapPinIcon'
+import ContactsForm from './ContactsForm'
 
 import Link from 'next/link'
 
@@ -74,113 +75,8 @@ export default function ContactCards() {
                 {/* Row 2: Form and working hours */}
                 <div className="mt-12 grid gap-8 md:grid-cols-[1.1fr_1fr]">
                     {/* Contact form */}
-                    <form className='rounded-2xl border border-slate-400 p-6 shadow-sm md:p-8 backdrop-blur-md bg-white/30'>
-                        {/* Heading and description */}
-                        <h2 className='text-2xl font-black'>
-                            Изпратете запитване
-                        </h2>
-                        <p className='mt-1 text-sm'>
-                            Попълнете формата и ще се свържем с вас в кратък срок
-                        </p>
-                        {/* Hidden anti-spam field */}
-                        
-                        <div className='mt-6 grid gap-4 md:grid-cols-2'>
-                            {/* Name */}
-                            <div>
-                                {/* Name input */}
-                                <label 
-                                    htmlFor='name'
-                                    className='mb-1.5 block text-xs font-bold uppercase tracking-wide'
-                                    >
-                                    Име *
-                                </label>
-                                <input
-                                    name='name'
-                                    id='name'
-                                    type='text'
-                                    required
-                                    className='w-full rounded-lg border border-slate-400 px-3 py-2.5 text-sm'
-                                    >
-                                
-                                </input>
-                                {/* Email input */}
-                            </div>
-                            <div>
-                                <label 
-                                    htmlFor='email'
-                                    className='mb-1.5 block text-xs font-bold uppercase tracking-wide'
-                                    >
-                                    Имейл *
-                                </label>
-                                <input
-                                    name='email'
-                                    id='email'
-                                    type='email'
-                                    required
-                                    className='w-full rounded-lg border border-slate-400 px-3 py-2.5 text-sm'
-                                    >
-                                
-                                </input>
-                            </div>
-                            <div>
-                                <label 
-                                    htmlFor='phone'
-                                    className='mb-1.5 block text-xs font-bold uppercase tracking-wide'
-                                    >
-                                    Телефон *
-                                </label>
-                                <input
-                                    name='phone'
-                                    id='phone'
-                                    type='text'
-                                    required
-                                    className='w-full rounded-lg border border-slate-400 px-3 py-2.5 text-sm'
-                                    >
-                                
-                                </input>
-                            </div>
-                            <div>
-                                <label 
-                                    htmlFor='service'
-                                    className='mb-1.5 block text-xs font-bold uppercase tracking-wide'
-                                    >
-                                    Услуга *
-                                </label>
-                                <select
-                                    name='service' id='service-select'
-                                    className='w-full rounded-lg border border-slate-400 px-3 py-2.5 text-sm'
-                                    >
-                                    <option value="" className='text-slate-300'></option>
-                                    <option value="Сервиз и Ремонт">Сервиз и Ремонт</option>
-                                    <option value="Диагностика">Диагностика</option>
-                                </select>
-                            </div>
-                            <div className='sm:col-span-2'>
-                                {/* Message label and textarea */}
-                                <label 
-                                    htmlFor='message'
-                                    className='mb-1.5 block text-xs font-bold uppercase tracking-wide'
-                                    >
-                                    Съобщение *
-                                </label>
-                                <textarea
-                                    name='message'
-                                    rows={5}
-                                    className='w-full rounded-lg border border-slate-400 px-3 py-2.5 text-sm'
-                                    >
-
-                                </textarea>
-                            </div>
-                            
-                        </div>
-                        {/* Submit button */}
-                        <button
-                            type='submit'
-                            className='mt-6 inline-flex items-center gap-2 rounded-lg bg-green-500 px-6 py-3 text-sm font-bold text-white/90 shadow-sm'
-                            >
-                            Изпрати запитване
-                        </button>
-                    </form>
+                    <ContactsForm
+                        />
                     {/* Working hours and quick contact */}
                     <div className='p-6 rounded-2xl border border-slate-400 shadow-sm md:p-8 backdrop-blur-md bg-white/30'>
                         <h3 className='text-xl font-black'>
