@@ -1,5 +1,30 @@
 # Digital-Technology-Service-Website
 
+## Project Overview:
+
+This project is a web application developed with Next.js to represent a real-world hardware service business.
+Its primary purpose is to provide customers with information about the business, its repair and diagnostic services
+and the avaliable contact options.
+
+The application serves as an online platform where customers can explore the services offered,
+learn more about specific repair solutions and submit service inquiries through a contact form.
+
+## Main Features:
+
+- `Homepage` - Introduces the business and presents its core services, including diagnostics and repair of Laptops, TV, Audio and Video equipment.
+
+- `Contact Page` - Provides the business's contact information, including email address, telephone number and physical address.
+It also includes a contact form which allows customers to submit inquiries about a service or a technical issue with device.
+
+- `Service Details Pages` - Provides dedicated pages for individual services, such as Laptop repair and TV repair.
+Each page represents detailed information about the specific service, helping customers understand the available repair solutions and determine if the service meets their needs.
+
+## Project Goal
+
+The goal of this project is to create a professional and accessible website that improves the business's online presence, make its services easier to discover and simplifies communication between the business and potential customers.
+
+
+
 ## Project Structure
 
 ```text
