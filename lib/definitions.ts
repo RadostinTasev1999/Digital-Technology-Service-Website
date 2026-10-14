@@ -333,3 +333,138 @@ export type FooterListData = {
     text: string,
     Icon: JSX.Element
 }
+
+export type ContactCardProps = {
+    contactCards: ContactCards
+    contactForm: ContactForm
+    quickContact: QuickContact,
+    formInputs: FormInputs
+}
+
+type FormInputs = {
+    nameInput: FormInputData,
+    emailInput: FormInputData,
+    phoneInput: FormInputData,
+    serviceInput: FormInputData,
+    messageInput: FormInputData
+}
+
+type FormInputData = {
+    label: string,
+    placeholder: string,
+    name: string,
+    type: string,
+    value?: OptionValues 
+    rows?: number
+}
+
+// ContactCardsType
+
+type ContactCards = {
+    contactCardsData: ContactCardsData
+}
+
+type ContactCardsData = {
+    id: number,
+    label: string,
+    text: string,
+    icon: React.FC
+}[]
+
+// ContactFormTypes
+
+ type ContactForm = {
+    contactFormData: ContactFormData
+}
+
+type ContactFormData = {
+    heading:string,
+    paragraph: string,
+    btnPrimary: string
+}
+
+type ContactInputs = {
+    id: number,
+    label: string,
+    placeholder: string,
+    name: string,
+    type?: string,
+    value?: OptionValues,
+    rows?: number
+}[]
+
+type OptionValues = {
+    id: number,
+    option: string
+}[]
+
+// QuickContactTypes
+
+type QuickContact = {
+    headingPrimary: string,
+    paragraph: string,
+    headingSecondary: string,
+    listItems: ContactListItems
+}
+
+type ContactListItems = {
+    id: number,
+    icon: React.FC,
+    text: string
+}[]
+
+export type ContactCardItemData = {
+    label: string,
+    text: string,
+    Icon: JSX.Element
+}
+
+export type ContactsFormData = {
+    heading: string,
+    paragraph: string,
+    nameInput:FormInputData,
+    emailInput:FormInputData,
+    phoneInput:FormInputData,
+    serviceInput:FormInputData,
+    messageInput:FormInputData
+    btnPrimary: string
+}
+
+export type ContactInputData = {
+    label: string,
+    placeholder: string,
+    name: string,
+    type?: string,
+    value?: OptionValues,
+    rows?: number,
+    formState: FormState
+}
+
+type FormState = {
+    success?: string,
+    errors?: {
+        name: string | string[],
+        email: string | string[],
+        phone: string | string[],
+        service: string | string[],
+        message: string | string[]
+    }
+};
+
+export type ContactQuickCardData = {
+    headingPrimary: string,
+    paragraph: string,
+    headingSecondary: string,
+    listItems: ContactQuickList
+}
+
+type ContactQuickList = {
+    id: number,
+    icon: React.FC,
+    text: string
+}[]
+
+export type ContactQuickItemData = {
+    text: string,
+    Icon: JSX.Element
+}
