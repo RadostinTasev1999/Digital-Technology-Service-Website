@@ -427,3 +427,111 @@ export const footerData = {
 
     ]
 }
+
+
+
+export const contactCards = {
+
+    contactCardsData: [
+        {
+            id:1,
+            label: 'Телефон',
+            text: '0897818149',
+            icon: PhoneIcon
+        },
+        {
+            id:2,
+            label: 'Имейл',
+            text: 'pamteks94@gmail.com',
+            icon: MailIcon
+        },
+        {
+            id:3,
+            label: 'Адрес',
+            text: 'гр.София пл. Преображение, кв. Захарна фабрика',
+            icon: MapPinIcon
+        }
+    ]
+}
+
+export const contactForm = {
+
+    contactFormData: {
+        heading: 'Изпратете запитване',
+        paragraph: 'Попълнете формата и ще се свържем с вас в кратък срок',
+        btnPrimary: 'Изпрати запитване'
+    }
+}
+
+export const quickContact = {
+    
+    headingPrimary: 'Работно Време',
+    paragraph: 'Пoнеделник - Петък 09:00 - 18:00',
+    headingSecondary: 'Контакти',
+    listItems: [
+        {
+            id:1,
+            icon: MapPinIcon,
+            text: 'гр.София пл. Преображение, кв. Захарна фабрика'
+        },
+        {
+            id:2,
+            icon: PhoneIcon,
+            text: '0897818149'
+        },
+        {
+            id:3,
+            icon: MailIcon,
+            text: 'pamteks94@gmail.com'
+        }
+    ]
+
+}
+
+export const formInputs = {
+
+    nameInput: {
+        label: 'Име *',
+        placeholder: 'Въведете име',
+        name: 'name',
+        type: 'text'
+    },
+    emailInput: {
+        label: 'Имейл *',
+        placeholder: 'Въведете имейл',
+        name: 'email',
+        type: 'text'
+    },
+    phoneInput: {
+        label: 'Телефон *',
+        placeholder: 'Въведете телефонен номер',
+        name: 'phone',
+        type: 'text'
+    },
+    serviceInput: {
+        label: 'Услуга *',
+        value: [
+                    {
+                        id:1,
+                        option:'Изберете тип услуга'
+                    },
+                    {
+                        id:2,
+                        option:'Ремонт'
+                    },
+                    {
+                        id:3,
+                        option:'Диагностика'
+                    }
+                ],
+        name: 'service',
+    },
+    messageInput: {
+        label: 'Съобщение *',
+        placeholder: 'Въведете съобщение',
+        name: 'message',
+        rows: 5
+    }
+
+
+}
