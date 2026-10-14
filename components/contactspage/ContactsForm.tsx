@@ -1,83 +1,46 @@
 'use client'
 
-import { useActionState, useReducer } from "react"
-import { createUserAction } from '@/actions/index'
+import { useActionState } from 'react';
+import { sendInquiry } from '@/app/api/action';
 
-const errorReducer = (state, action) => {
+import {ContactsFormData} from '@/lib/definitions'
 
-    switch (action.type) {
-        case 'value':
-            
-            break;
-    
-        default:
-            break;
+const initialState = {
+    success: '',
+    errors: {
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: ''
     }
-}
-
-const inputsReducer = (state, action) => {
-
-    /*
-        {
-                type: 'UPDATE_INPUT',
-                name: e.target.name,
-                value: e.target.value
-
-            }
-    */
-
-    switch (action.type) {
-
-        case 'UPDATE_INPUT':
-            
-        return {
-            ...state,
-            [action.name]: action.value
-        }
-            
-    
-        default:
-            break;
-    }
-}
+};
 
 
+export default function ContactsForm({
+    heading,
+    paragraph,
+    nameInput,
+    emailInput,
+    phoneInput,
+    serviceInput,
+    messageInput,
+    btnPrimary
+}: ContactsFormData) {
 
-export default function ContactsForm() {
+    const [formState, dispatchAction] = useActionState(sendInquiry, initialState);
 
-    /*
-        type ActionState = {
-            data?: ContactInput,
-            errors?: ContactErrors,
-            success?: boolean
-        }
-        
-        formState initial state is of type ActionState
-    */
-    const [formState, formAction] = useActionState(createUserAction, {});
-    const [inputError, dispatchInputError] = useReducer(errorReducer, {nameError: '', emailError: '', phoneError: '', serviceError: '', messageError: ''})
-    const [inputs, dispatchInputs] = useReducer(inputsReducer, {name: '', email: '', phone: '', service: '', message: ''})
+    // ! -> sendInquiry returns the new state, and triggers a Transition to re-render with that state.
 
-    const handleChange = (e) => {
-
-        dispatchInputs(
-            {
-                type: 'UPDATE_INPUT',
-                name: e.target.name,
-                value: e.target.value
-
-            }
-        )
-    }
 
     return(
-        <form action={formAction} className='rounded-2xl border border-slate-400 p-6 shadow-sm md:p-8 backdrop-blur-md bg-white/30'>
+        <form action={dispatchAction} className='rounded-2xl border border-slate-400 p-6 shadow-sm md:p-8 backdrop-blur-md bg-white/30'>
             {/* Heading and description */}
             <h2 className='text-2xl font-black'>
-                Изпратете запитване
+                {heading}
             </h2>
             <p className='mt-1 text-sm'>
-                Попълнете формата и ще се свържем с вас в кратък срок
+                {paragraph}
             </p>
             {/* Hidden anti-spam field */}
 
@@ -85,95 +48,130 @@ export default function ContactsForm() {
                 {/* Name */}
                 <div>
                     {/* Name input */}
+
                     <label
                         htmlFor='name'
                         className='mb-1.5 block text-xs font-bold uppercase tracking-wide'
                     >
-                        Име *
+                        {nameInput.label}
                     </label>
                     <input
-                        name='name'
-                        id='name'
-                        type='text'
-                        required
+                        name={nameInput.name}
+                        id={nameInput.name}
+                        type={nameInput.type}
                         className='w-full rounded-lg border border-slate-400 px-3 py-2.5 text-sm'
-                        onChange={handleChange}
-                        defaultValue={inputs.name}
-                        placeholder="Въведете име"
+                        placeholder={nameInput.placeholder}
                     >
 
                     </input>
-                    {/* Email input */}
+                    {
+                        formState.errors?.name && (
+                            <p className='text-xs text-red-600 mt-2'>
+                                {formState.errors.name[0]}
+                            </p>
+                        )
+                    }
+                    
                 </div>
+                
+                {/* Email */}
                 <div>
                     <label
                         htmlFor='email'
                         className='mb-1.5 block text-xs font-bold uppercase tracking-wide'
                     >
-                        Имейл *
+                        {emailInput.label}
                     </label>
                     <input
-                        name='email'
-                        id='email'
-                        type='email'
-                        required
+                        name={emailInput.name}
+                        id={emailInput.name}
+                        type={emailInput.type}
                         className='w-full rounded-lg border border-slate-400 px-3 py-2.5 text-sm'
-                        placeholder="Въведете имейл"
+                        placeholder={emailInput.placeholder}
                     >
-
+                        
                     </input>
+                    {
+                        formState.errors?.email && (
+                            <p className='text-xs text-red-600 mt-2'>
+                                {formState.errors.email[0]}
+                            </p>
+                        )
+                    }
                 </div>
+                {/* Phone */}
                 <div>
                     <label
                         htmlFor='phone'
                         className='mb-1.5 block text-xs font-bold uppercase tracking-wide'
                     >
-                        Телефон *
+                       {phoneInput.label}
                     </label>
                     <input
-                        name='phone'
-                        id='phone'
-                        type='text'
-                        required
+                        name={phoneInput.name}
+                        id={phoneInput.name}
+                        type={phoneInput.type}
+                        
                         className='w-full rounded-lg border border-slate-400 px-3 py-2.5 text-sm'
-                        placeholder="Въведете телефон"
+                        placeholder={phoneInput.placeholder}
                     >
 
                     </input>
+                    {
+                        formState.errors?.phone && (
+                            <p className='text-xs text-red-600 mt-2'>
+                                {formState.errors.phone[0]}
+                            </p>
+                        )
+                    }
                 </div>
+                {/* Service */}
                 <div>
                     <label
                         htmlFor='service'
                         className='mb-1.5 block text-xs font-bold uppercase tracking-wide'
                     >
-                        Услуга *
+                        {serviceInput.label}
                     </label>
                     <select
-                        name='service' id='service-select'
+                        name={serviceInput.name} id={serviceInput.name}
                         className='w-full rounded-lg border border-slate-400 px-3 py-2.5 text-sm'
                     
                     >
-                        <option value="" className='text-slate-300'>Изберете услуга</option>
-                        <option value="Сервиз и Ремонт">Сервиз и Ремонт</option>
-                        <option value="Диагностика">Диагностика</option>
+                        {
+                            serviceInput.value?.map((el) => (
+                                <option key={el.id} value={`${el.id > 1 ? el.option : ''}`} className='text-slate-300'>
+                                    {el.option}
+                                </option>
+
+                            ))
+                        }
                     </select>
                 </div>
+                {/* Message */}
                 <div className='sm:col-span-2'>
                     {/* Message label and textarea */}
                     <label
                         htmlFor='message'
                         className='mb-1.5 block text-xs font-bold uppercase tracking-wide'
                     >
-                        Съобщение *
+                       {messageInput.label}
                     </label>
                     <textarea
-                        name='message'
-                        rows={5}
+                        name={messageInput.name}
+                        rows={messageInput.rows}
                         className='w-full rounded-lg border border-slate-400 px-3 py-2.5 text-sm'
-                        placeholder="Въведете съобщение"
+                        placeholder={messageInput.placeholder}
                     >
 
                     </textarea>
+                    {
+                        formState.errors?.message && (
+                            <p className='text-xs text-red-600 mt-2'>
+                                {formState.errors.message[0]}
+                            </p>
+                        )
+                    }
                 </div>
 
             </div>
@@ -182,7 +180,7 @@ export default function ContactsForm() {
                 type='submit'
                 className='mt-6 inline-flex items-center gap-2 rounded-lg bg-green-500 px-6 py-3 text-sm font-bold text-white/90 shadow-sm'
             >
-                Изпрати запитване
+                {btnPrimary}
             </button>
         </form>
     )
