@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import 'rsuite/dist/rsuite-no-reset.min.css'
 
 import "./globals.css"; 
