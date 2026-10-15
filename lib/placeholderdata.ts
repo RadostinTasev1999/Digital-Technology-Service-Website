@@ -7,7 +7,8 @@ import VideoIcon from '@/components/ui/VideoIcon'
 import MapPinIcon from '@/components/ui/MapPinIcon'
 import PhoneIcon from '@/components/ui/PhoneIcon'
 import MailIcon from '@/components/ui/MailIcon'
-import { url } from 'inspector'
+import ClickIcon from '@/components/ui/ClickIcon'
+
 
 export const navItems = [
     {
@@ -33,8 +34,15 @@ export const navItems = [
 ]
 
 export const navActionData = {
-    phone: '0897818149',
-    text: 'Заяви оглед'
+    btnPrimary: {
+        text: '0897818149',
+        url: '/'
+    },
+    btnSecondary: {
+        text:'Направи запитване',
+        url: 'contacts#contact-cards'
+    },
+    icon: PhoneIcon
 }
 
 export const heroSectionData = {
@@ -44,8 +52,18 @@ export const heroSectionData = {
         txt2:"Аудио и Видео техника."
     },
     heroDescription: "Сервиз Памтекс 94 ООД извършва ремонт и диагностика на Телевизионна, Аудио и Видео техника в София.",
-    heroBtn1:"Заяви посещение",
-    heroBtn2:"Обади се: 0897818149",
+    heroCtaButtons: {
+        btnPrimary: {
+            heroBtn1: 'Изпрати запитване',
+            url: 'contacts#contact-cards',
+            icon:ClickIcon
+        },
+        btnSecondary: {
+            heroBtn2: '0897818149',
+            url: 'contacts#contact-cards',
+            icon:PhoneIcon
+        }
+    },
     heroLogoCard:{
         heading:"Памтекс 94 ООД",
         text: "Ремонт на Хардуерна техника"
@@ -53,13 +71,13 @@ export const heroSectionData = {
     heroServiceCards: [
         {   
             id: 1,
-            status: "Активна",
+            status: "",
             service: "Аудио и Видео Техника",
             serviceInfo: "Диагностика и Ремонт"
         },
         {
             id:2,
-            status: "Активна",
+            status: "",
             service: "Телевизионна Техника",
             serviceInfo: "Диагностика и Ремонт"
         }
@@ -67,7 +85,7 @@ export const heroSectionData = {
     ]
      ,
     heroLongCard: {
-        status:"Активна",
+        status:"",
         service: "Компютри и компютърни периферии",
         serviceInfo: "Диагностика и ремонт"
     }
@@ -97,11 +115,13 @@ export const heroStatistics = [
 ]
 
 export const sectionHeadings = {
+
     serviceSection: {
         label: 'Услуги',
         heading: 'Основни услуги които предлагаме',
         description: 'Разгледайте услугите който извършваме'
     }
+
 }
 
 export const serviceCardData = [
@@ -165,12 +185,12 @@ export const laptopIntroData = {
         serviceType: 'Ремонт на лаптоп'
     },
     text: {
-        badge: 'Услуга',
+        badge: 'Лаптопи',
         heading: 'Ремонт на лаптопи',
         description: 'Памтекс 94 ООД извършва ремонт и диагностика на лаптопи за частни клиенти и малки бизнеси в София. Работим върху хардуерни проблеми - батерия, охлаждане, дисплей, клавиатура. Преди извършване на ремонт, правим диагностика и информираме в детайли вариантите за ремонт.'
     },
     btnPrimary: {
-        url: "/",
+        url: "/contacts#contact-cards",
         text: 'Направи запитване'
     },
     btnSecondary: {
@@ -283,12 +303,12 @@ export const tvIntroData = {
         serviceType: 'Ремонт на телевизори'
     },
     text: {
-        badge: 'Услуга',
+        badge: 'Телевизори',
         heading: 'Ремонт на телевизори',
         description: 'Памтекс 94 ООД извършва диагностика и ремонт на телевизори за частни клиенти и малки бизнеси в София. Работим върху проблеми с картина, звук, връзка с интернет, инсталиране на приложения и свързване с външни устройства като декодери, плейъри и звукови системи.'
     },
     btnPrimary: {
-        url: "/",
+        url: "/contacts#contact-cards",
         text: 'Направи запитване'
     },
     btnSecondary: {
@@ -395,7 +415,7 @@ export const contactsIntroData = {
         description: 'Опишете накратко техническият проблем . Ще се свържем с вас и ще предложим следваща стъпка'
     },
     btnPrimary: {
-        url: "/",
+        url: "#contact-cards",
         text: 'Направи запитване'
     },
     btnSecondary: {
@@ -534,4 +554,107 @@ export const formInputs = {
     }
 
 
+}
+
+export const monitorData = {
+    navLinks:{
+        homeUrl: '/',
+        serviceUrl: '/service',
+        serviceTypeUrl: '/service/monitors'
+    },
+    navText: {
+        home: 'Начало',
+        service: 'Услуги',
+        serviceType: 'Монитори'
+    },
+    text: {
+        badge: 'Монитори',
+        heading: 'Ремонт на монитори',
+        description: 'Памтекс 94 ООД извършва ремонт и диагностика на монитори за частни клиенти и малки бизнеси в София. Работим върху хадруерни проблеми - захранване, екран, подсветка, прегряване. Преди извършване на ремонт, правим диагностика и информираме в детайли вариантите за ремонт'
+    },
+    btnPrimary: {
+        url: '/contacts#contact-form',
+        text: 'Направи запитване'
+    },
+    btnSecondary: {
+        url: '/',
+        text: '0897818149'
+    }
+}
+
+export const monitorDescData = {
+    heading: {
+        label: 'Какво представлява услугата',
+        headingText: 'Кога да изберете тази услуга'
+    },
+    description: {
+        text: 'Екранът е черен, но компютърът работи, много тъмна картина, мониторът изключва сам, бавно включване, трептене или премигване на картина, спират работата и забавят ежедневните задачи. Качествената диагностика спестява разходи и често връща устройството в нормално състояние.'
+    }
+}
+
+export const serviceDetailsData = {
+    serviceDetailsL: {
+        heading: 'Какво включва услугата',
+        listItems: [
+            {
+                id:1,
+                text:'Първоначална диагностика'
+            },
+            {
+                id:2,
+                text:'Ремонт на електрониката'
+            },
+            {
+                id:3,
+                text:'Ремонт на осветлението'
+            },
+            {
+                id:4,
+                text:'Профилактика и почистване'
+            },
+            {
+                id:5,
+                text:'Финални тестове и калибриране'
+            }
+        ]
+    },
+    serviceDetailsR: {
+        heading: 'За кого е подходящо',
+        listItems: [
+            {
+                id:1,
+                text: 'Частни клиенти с домашен монитор или работен монитор'
+            },
+            {
+                id:2,
+                text: 'Офиси с фирмени монитори'
+            },
+            {
+                id:3,
+                text: 'Клиенти с по-стари монитори нуждаещи се от профилактика'
+            }
+        ]
+    }
+}
+
+export const serviceDetailsFaq = {
+    label: 'Въпроси',
+    heading: 'Често задавани въпроси',
+    serviceFaqList: [
+        {
+            id:1,
+            question: 'Колко ще струва ремонтът и заслужава ли си',
+            answer: 'Цената на ремонта се определя след като се направи диагностика на проблема. Информираме Ви за точната цена веднага след диагностиката'
+        },
+        {
+            id:2,
+            question: 'Колко време отнема ремонтът?',
+            answer: 'Стандартният ремонт (захранване или букси) отнема между 1 и 3 работни дни. Ако се налага подмяна на специфични LED ленти за подсветка или поръчка на оригинални части, които нямаме на склад, срокът може да се удължи до 5-7 работни дни.'
+        },
+        {
+            id:3,
+            question: 'Има картина, но е много тъмна – какво му има?',
+            answer: 'Това е класически симптом за изгоряла подсветка (LED ленти или инвертор). Екранът работи и матрицата е здрава, но няма какво да я освети отзад. Проблемът е напълно разрешим и мониторът ще работи като нов след смяната им.'
+        }
+    ]
 }
