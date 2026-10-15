@@ -1,9 +1,16 @@
 import { JSX } from "react/jsx-runtime"
+import { Dispatch, SetStateAction } from "react"
 
 export type NavList = {
     navItems: NavItems,
-    phone: string,
-    text: string
+    btnPrimary: HeaderBtnData
+    btnSecondary: HeaderBtnData,
+    Icon: JSX.Element
+}
+
+type HeaderBtnData = {
+    text: string,
+    url: string
 }
 
 type NavItems = {
@@ -14,12 +21,15 @@ type NavItems = {
 
 export type ItemName = {
     item: string,
-    url: string
+    url: string,
+    onMobileClose?: () => void
 }
 
 export type ActionItems = {
-    phone: string,
-    text: string
+    btnPrimary:HeaderBtnData,
+    btnSecondary:HeaderBtnData,
+    Icon?: JSX.Element,
+    onMobileClose?: () => void
 }
 
 export type HamburgerData = {
@@ -31,12 +41,28 @@ export type AppHeroData = {
     badgeText: string,
     heroHeading: HeroHeading,
     heroDescription: string,
-    heroBtn1: string
-    heroBtn2: string
+    heroCta: HeroCtaButtons
     heroLogoCard: HeroLogoCard
     heroServiceCards: HeroCardInfo
     heroLongCard: HeroLongCard,
     heroStatistics: HeroStats
+}
+
+type HeroCtaButtons = {
+    btnPrimary: BtnPrimary
+    btnSecondary: BtnSecondary
+}
+
+type BtnPrimary = {
+    heroBtn1: string,
+    url: string,
+    icon:React.FC
+}
+
+type BtnSecondary = {
+    heroBtn2: string,
+    url: string,
+    icon:React.FC
 }
 
 type HeroLongCard = {
@@ -81,8 +107,8 @@ export type HeroDescriptionText = {
 }
 
 export type HeroCtaText = {
-    heroBtn1: string,
-    heroBtn2: string
+    heroBtnPrimary: BtnPrimary,
+    heroBtnSecondary: BtnSecondary
 }
 
 export type HeroLogoCardData = {
