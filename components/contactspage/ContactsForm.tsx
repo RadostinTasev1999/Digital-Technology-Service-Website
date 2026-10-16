@@ -34,12 +34,12 @@ export default function ContactsForm({
 
 
     return(
-        <form action={dispatchAction} className='rounded-2xl border border-slate-400 p-6 shadow-sm md:p-8 backdrop-blur-md bg-white/30'>
+        <form action={dispatchAction} className='flex flex-col sm:basis-2xl md:basis-3xl lg:basis-4xl'>
             {/* Heading and description */}
-            <h2 className='text-2xl font-black'>
+            <h2 className="text-2xl font-bold text-slate-900 text-center">
                 {heading}
             </h2>
-            <p className='mt-1 text-sm'>
+            <p className="mt-2 text-sm text-slate-600 text-center">
                 {paragraph}
             </p>
             {/* Hidden anti-spam field */}
@@ -59,7 +59,7 @@ export default function ContactsForm({
                         name={nameInput.name}
                         id={nameInput.name}
                         type={nameInput.type}
-                        className='w-full rounded-lg border border-slate-400 px-3 py-2.5 text-sm'
+                        className="w-full rounded-lg border border-slate-300 bg-white/70 px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-600/20"
                         placeholder={nameInput.placeholder}
                     >
 
@@ -86,7 +86,7 @@ export default function ContactsForm({
                         name={emailInput.name}
                         id={emailInput.name}
                         type={emailInput.type}
-                        className='w-full rounded-lg border border-slate-400 px-3 py-2.5 text-sm'
+                        className="w-full rounded-lg border border-slate-300 bg-white/70 px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-600/20"
                         placeholder={emailInput.placeholder}
                     >
                         
@@ -112,7 +112,7 @@ export default function ContactsForm({
                         id={phoneInput.name}
                         type={phoneInput.type}
                         
-                        className='w-full rounded-lg border border-slate-400 px-3 py-2.5 text-sm'
+                        className="w-full rounded-lg border border-slate-300 bg-white/70 px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-600/20"
                         placeholder={phoneInput.placeholder}
                     >
 
@@ -135,7 +135,7 @@ export default function ContactsForm({
                     </label>
                     <select
                         name={serviceInput.name} id={serviceInput.name}
-                        className='w-full rounded-lg border border-slate-400 px-3 py-2.5 text-sm'
+                        className="w-full rounded-lg border border-slate-300 bg-white/70 px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-600/20"
                     
                     >
                         {
@@ -160,7 +160,7 @@ export default function ContactsForm({
                     <textarea
                         name={messageInput.name}
                         rows={messageInput.rows}
-                        className='w-full rounded-lg border border-slate-400 px-3 py-2.5 text-sm'
+                        className="w-full rounded-lg border border-slate-300 bg-white/70 px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-600/20"
                         placeholder={messageInput.placeholder}
                     >
 
@@ -178,7 +178,7 @@ export default function ContactsForm({
             {/* Submit button */}
             <button
                 type='submit'
-                className='mt-6 inline-flex items-center gap-2 rounded-lg bg-green-500 px-6 py-3 text-sm font-bold text-white/90 shadow-sm'
+                className='mt-6 inline-flex items-center justify-center gap-2 rounded-lg bg-green-500 px-6 py-3 text-sm font-bold text-white/90 shadow-sm self-center sm:w-xl md:w-2xl lg:w-3xl'
             >
                 {btnPrimary}
             </button>
