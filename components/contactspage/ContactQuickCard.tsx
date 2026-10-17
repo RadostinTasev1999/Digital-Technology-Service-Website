@@ -9,21 +9,18 @@ export default function ContactQuickCard({
 }: ContactQuickCardData){
 
     return(
-        <div className='p-6 rounded-2xl border border-slate-400 shadow-sm md:p-8 backdrop-blur-md bg-white/30'>
-            <h3 className='text-xl font-black'>
+        <div className="border-t border-slate-200 pt-8 md:border-l md:border-t-0 md:pl-10 md:pt-0">
+            <h3 className="text-xl font-bold text-slate-900">
                 {headingPrimary}
             </h3>
-            <p className='mt-2 text-slate-600 text-sm'>
+            <p className="mt-2 text-sm text-slate-600">
                {paragraph}
             </p>
 
-            <h3 className='mt-6 text-xl font-black'>{headingSecondary}</h3>
+            <h3 className="mt-8 text-xl font-bold text-slate-900">{headingSecondary}</h3>
 
-            <div className='mt-3'>
-                
+            <div className="mt-4">
                 <ul className="space-y-3 text-sm">
-                    {/* Address */}
-
                     {
                         listItems.map((el) => (
                             <ContactQuickItem

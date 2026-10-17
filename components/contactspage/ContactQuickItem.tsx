@@ -6,10 +6,10 @@ export default function ContactQuickItem({
 }: ContactQuickItemData){
 
     return(
-        <li className="flex gap-2">
-            {Icon}
+        <li className="flex gap-3 text-slate-700">
+            <span className="mt-0.5 shrink-0 text-green-700">{Icon}</span>
 
-            <span className="text-slate-800">
+            <span>
                {text}
             </span>
         </li>

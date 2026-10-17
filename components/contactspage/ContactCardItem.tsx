@@ -8,20 +8,18 @@ export default function ContactCardItem({
 }: ContactCardItemData) {
 
     return(
-        <div className="rounded-2xl border border-slate-300 p-6 shadow-md backdrop-blur-md bg-white/30">
-            {/* Icon Container */}
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-green-800 text-green-800 bg-slate-100">
-                {/* SVG icon */}
+        <div className="flex min-w-0 items-start gap-3 py-2">
+            <span className="mt-1 shrink-0 text-green-700">
                 {Icon}
             </span>
-            {/* Card Label */}
-            <div className='mt-4 text-xs font-bold uppercase tracking-wide'>
-                {label}
+            <div className="min-w-0">
+                <div className="text-xs font-bold uppercase tracking-wide text-slate-500">
+                    {label}
+                </div>
+                <Link href='/' className="mt-1 block break-words text-sm font-semibold text-slate-900">
+                    {text}
+                </Link>
             </div>
-            {/* Contact information */}
-            <Link href='/' className='mt-1 block text-md font-bold text-green-900'>
-                {text}
-            </Link>
         </div>
     )
 }
