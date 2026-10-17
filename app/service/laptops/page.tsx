@@ -24,20 +24,20 @@ export default function LaptopService() {
             heroData={laptopIntroData}
             />
 
-        <Divider size="sm" color="#9ac4c6"/>
+        <Divider size="xs" color="#9ac4c6"/>
         {/* Description Section */}
         <ServiceDescription 
             heroServiceDesc={laptopServiceDesc}
             />
 
-        <Divider size="sm" color="#9ac4c6"/>
+        <Divider size="xs" color="#9ac4c6"/>
         {/* Sevice Details Section */}
         <ServiceDetails
             serviceDetailsL={laptopServiceDetailsL}
             serviceDetailsR={laptopServiceDetailsR}
             />
 
-        <Divider size="sm" color="#9ac4c6"/>
+        <Divider size="xs" color="#9ac4c6"/>
         {/* FAQ Section */}
         <ServiceFaq
            label={laptopServiceFaqHeading.label}

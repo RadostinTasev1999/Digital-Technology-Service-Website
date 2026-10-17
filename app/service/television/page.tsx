@@ -20,7 +20,7 @@ export default function TelevisionService() {
             heroData={tvIntroData}
             />
 
-        <Divider size="sm" color="#9ac4c6"/>
+        <Divider size="xs" color="#9ac4c6"/>
 
         {/* Description Section */}
 
@@ -28,7 +28,7 @@ export default function TelevisionService() {
             heroServiceDesc={tvServiceDesc}
             />
 
-        <Divider size="sm" color="#9ac4c6"/>
+        <Divider size="xs" color="#9ac4c6"/>
 
         {/* ServiceDetails */}
 
@@ -37,7 +37,7 @@ export default function TelevisionService() {
             serviceDetailsR={tvServiceDetailsR}
             />
 
-        <Divider size="sm" color="#9ac4c6"/>
+        <Divider size="xs" color="#9ac4c6"/>
 
         {/* ServiceFaq */}
         <ServiceFaq
