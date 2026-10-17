@@ -13,7 +13,7 @@ export default function HeroStatistics({
         >
             <div
                 id='container'
-                className='mx-auto px-6'
+                className='mx-auto px-6 max-w-7xl'
             >
                 {/* Grid layout */}
                 <div
