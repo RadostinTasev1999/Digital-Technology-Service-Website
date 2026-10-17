@@ -15,8 +15,7 @@ export default function AppHero({
     badgeText,
     heroHeading,
     heroDescription,
-    heroBtn1,
-    heroBtn2,
+    heroCta,
     heroLogoCard,
     heroServiceCards,
     heroLongCard,
@@ -54,8 +53,8 @@ export default function AppHero({
                     {/* CTA Buttons */}
                     
                     <HeroCtaButtons 
-                        heroBtn1={heroBtn1}
-                        heroBtn2={heroBtn2}
+                        heroBtnPrimary={heroCta.btnPrimary}
+                        heroBtnSecondary={heroCta.btnSecondary}
                         />
                 </div>
                 {/* Right side */}
@@ -85,13 +84,13 @@ export default function AppHero({
                 </div>
             </div>
             {/* Divider */}
-            <Divider size="sm" color="#9ac4c6"/>
+            <Divider size="xs" color="#9ac4c6" className='mx-auto max-w-7xl'/>
             {/* Hero Statistics */}
             <HeroStatistics
                 heroStatistics={heroStatistics}
                     />
             {/* Divider */}
-            <Divider size="sm" color="#9ac4c6"/>
+            <Divider size="xs" color="#9ac4c6" className='mx-auto max-w-7xl'/>
         </section>
     )
 }
