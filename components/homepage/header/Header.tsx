@@ -12,17 +12,24 @@ import MobileActionButtons from "./MobileActionButtons";
 
 export default function AppHeader({
     navItems,
-    phone,
-    text
+    btnPrimary,
+    btnSecondary,
+    Icon
 }: NavList) {
 
-    const [mobileOpen, setMobileOpen] = useState(false);
-    const [showMenu, setShowMenu] = useState(false);
+    const [mobileOpen, setMobileOpen] = useState(false); // true
+    const [showMenu, setShowMenu] = useState(false); // true
 
     const onMobileClick = () => {
         console.log("Clicked!")
-        setMobileOpen(state => !state)
-        setShowMenu(state => !state)
+        setMobileOpen(state => !state) // true
+        setShowMenu(state => !state) // true
+    }
+
+    const onMobileClose = () => {
+        setMobileOpen(state => !state) // false
+        setShowMenu(state => !state) // false
+        // console.log('List item has been clicked!')
     }
 
     useEffect(() => {
@@ -48,8 +55,9 @@ export default function AppHeader({
                 </nav>
                 {/* Desktop right side actions */}
                 <HeaderActions 
-                    phone={phone}
-                    text={text}
+                    btnPrimary={btnPrimary}
+                    btnSecondary={btnSecondary}
+                    Icon={Icon}
                 />
 
                 {/* Mobile hamburger */}
@@ -67,14 +75,16 @@ export default function AppHeader({
                             <ul className="space-y-1">
                                 {
                                     navItems.map((item) => (
-                                        <MobileListItems key={item.id} item={item.name} url={item.url}/>
+                                        <MobileListItems key={item.id} onMobileClose={onMobileClose} item={item.name} url={item.url}/>
                                     ))
                                 }
                             </ul>
                             {/* MobileActionButtons */}
                             <MobileActionButtons
-                                phone={phone}
-                                text={text}
+                                btnPrimary={btnPrimary}
+                                btnSecondary={btnSecondary}
+                                Icon={Icon}
+                                onMobileClose={onMobileClose}
                             />
                         </div>
 
