@@ -16,8 +16,7 @@ export default function Page() {
           badgeText={heroSectionData.badgeText}
           heroHeading={heroSectionData.heroHeading}
           heroDescription={heroSectionData.heroDescription}
-          heroBtn1={heroSectionData.heroBtn1}
-          heroBtn2={heroSectionData.heroBtn2}
+          heroCta={heroSectionData.heroCtaButtons}
           heroLogoCard={heroSectionData.heroLogoCard}
           heroServiceCards={heroSectionData.heroServiceCards}
           heroLongCard={heroSectionData.heroLongCard}
