@@ -20,8 +20,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {/* Header */}
         <AppHeader 
           navItems={navItems}
-          phone={navActionData.phone}
-          text={navActionData.text}
+          btnPrimary={navActionData.btnPrimary}
+          btnSecondary={navActionData.btnSecondary}
+          Icon={<navActionData.icon />}
           />
         <main className="min-h-screen bg-cover bg-center bg-[url(/Gemini_Generated_Image_yj8ifuyj8ifuyj8i.jpg)] bg-fixed">
         <CustomProvider>
