@@ -44,6 +44,8 @@ export async function sendInquiry(prevState: initialState, formData: FormData){
     // ! convert raw formData into regular JavaScript object
        const contactFormData = Object.fromEntries(formData)
 
+       console.log(`FormData object: ${contactFormData}`)
+
        const validatedContactFormData = ContactFormSchema.safeParse(contactFormData)
        //! safeParse returns an object with a success boolean.
        /*
@@ -53,6 +55,7 @@ export async function sendInquiry(prevState: initialState, formData: FormData){
 
         if (!validatedContactFormData.success) {
 
+            console.log('THere is an error!')
             const flattened = z.flattenError(validatedContactFormData.error).fieldErrors
             // -> use z.flattenError to retrieve a clean, shallow error object.
             // console.log(flattened.fieldErrors.name?[0])
@@ -69,10 +72,10 @@ export async function sendInquiry(prevState: initialState, formData: FormData){
             }
             
         }
-
+        // If validation passes:
         const payloadData = JSON.stringify(validatedContactFormData.data);
 
-        try {
+        // Send POST request to /api/contact
             const response = await fetch('http://localhost:3000/api/contact',{
                 method: 'POST',
                 headers: {
@@ -81,11 +84,24 @@ export async function sendInquiry(prevState: initialState, formData: FormData){
                 body: payloadData
             });
 
-            console.log(response)
+            const result = await response.json();
+            console.log('Result is:', result)
 
-        } catch (error) {
+            if (response.status === 200) {
+
+                console.log('Response seturns status 200 OK!')
+                return {
+                    success: result.message
+                } 
+            } else if (response.status === 500) {
+                console.log('Response returns status 500 Internal server error!')
+                return {
+                    success: result.message
+                }
+            }
             
-        }
+
+        } 
         /*
             ! on success:
             {
@@ -101,18 +117,6 @@ export async function sendInquiry(prevState: initialState, formData: FormData){
         */
    
     // safeParse -> returns an object indicating success or failure of the validation
-
-    
-    //! This is where you send the message to your email using any email service provider
-    // 
-    // return {
-    //     success: 'Благодарим Ви за запитването. Ще се свържем с вас до 24 часа.'
-    // }
-
-    return {
-        success: 'Благодарим за вашето съобщение. Ще се свържем с вас през следващите 24 часа.'
-    }
-}
 
 /*
 ! -> if success: false -> it provides { success: false, error: ZodError }
