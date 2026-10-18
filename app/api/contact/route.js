@@ -44,12 +44,18 @@ export async function POST(request) {
     })
 
     try {
-        await mg.messages.create(process.env.SANDBOX_DOMAIN, data)
+        await mg.messages.create(process.env.SANDBOX_DOMAIN,data)
 
-        return Response.json({ message: 'Data successfully sent' })
+        return Response.json(
+            { message: 'success' },
+            { status: 200}
+        )
     } catch (error) {
-        
+        return Response.json(
+            { message: 'error'},
+            { status: 500 }
+        )
     }
 
-    return Response.json({ received:true })
+    // return Response.json({ received:true })
 }
