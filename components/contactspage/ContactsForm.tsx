@@ -1,5 +1,6 @@
 'use client'
 
+import Alert from '@mui/material/Alert';
 import { useActionState } from 'react';
 import { sendInquiry } from '@/app/api/action';
 
@@ -65,7 +66,7 @@ export default function ContactsForm({
 
                     </input>
                     {
-                        formState.errors?.name && (
+                        formState && formState.errors?.name && (
                             <p className='text-xs text-red-600 mt-2'>
                                 {formState.errors.name[0]}
                             </p>
@@ -92,7 +93,7 @@ export default function ContactsForm({
                         
                     </input>
                     {
-                        formState.errors?.email && (
+                        formState && formState.errors?.email && (
                             <p className='text-xs text-red-600 mt-2'>
                                 {formState.errors.email[0]}
                             </p>
@@ -118,7 +119,7 @@ export default function ContactsForm({
 
                     </input>
                     {
-                        formState.errors?.phone && (
+                       formState && formState.errors?.phone && (
                             <p className='text-xs text-red-600 mt-2'>
                                 {formState.errors.phone[0]}
                             </p>
@@ -166,7 +167,7 @@ export default function ContactsForm({
 
                     </textarea>
                     {
-                        formState.errors?.message && (
+                        formState && formState.errors?.message && (
                             <p className='text-xs text-red-600 mt-2'>
                                 {formState.errors.message[0]}
                             </p>
@@ -175,6 +176,23 @@ export default function ContactsForm({
                 </div>
 
             </div>
+            {/* Form State message */}
+            {
+                formState?.success === 'success' && (
+
+                    <Alert severity='success'>
+                        Вашето съобщение е изпратено успешно!
+                    </Alert>
+                )
+                            
+            }
+            {
+                formState?.success === 'error' && (
+                    <Alert severity='error'>
+                        Грешка при изпращане на съобщение.
+                    </Alert>
+                )
+            }
             {/* Submit button */}
             <button
                 type='submit'
