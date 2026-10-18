@@ -8,6 +8,8 @@ import MapPinIcon from '@/components/ui/MapPinIcon'
 import PhoneIcon from '@/components/ui/PhoneIcon'
 import MailIcon from '@/components/ui/MailIcon'
 import ClickIcon from '@/components/ui/ClickIcon'
+import ClockIcon from '@/components/ui/ClockIcon'
+import ArrowUpRight from '@/components/ui/ArrowUpRight'
 
 
 export const navItems = [
@@ -450,29 +452,6 @@ export const footerData = {
 
 
 
-export const contactCards = {
-
-    contactCardsData: [
-        {
-            id:1,
-            label: 'Телефон',
-            text: '0897818149',
-            icon: PhoneIcon
-        },
-        {
-            id:2,
-            label: 'Имейл',
-            text: 'pamteks94@gmail.com',
-            icon: MailIcon
-        },
-        {
-            id:3,
-            label: 'Адрес',
-            text: 'гр.София пл. Преображение, кв. Захарна фабрика',
-            icon: MapPinIcon
-        }
-    ]
-}
 
 export const contactForm = {
 
@@ -658,3 +637,58 @@ export const serviceDetailsFaq = {
         }
     ]
 }
+
+export const contactCardHeading = {
+    heading: 'Как да ни намерите',
+    text: 'Отбийте се с устройството или ни изпратете запитване предварително - отговаряме в рамките до 2 работни дни'
+}
+
+export const contactCardsData = [
+    {
+        id:1,
+        label:'address',
+        icon: MapPinIcon,
+        heading: 'Адрес',
+        text: 'гр.София пл. Преображение, кв. Захарна фабрика',
+        url: 'https://maps.app.goo.gl/RX4h3NBxSYgQN8xy8',
+        urlText: 'Виж на картата',
+        urlIcon: ArrowUpRight
+    },
+    {
+        id:2,
+        label: 'telephone',
+        icon: PhoneIcon,
+        heading: 'Телефон',
+        url: 'tel:0897818149',
+        urlText: '0897818149'
+    },
+    {
+        id:3,
+        label: 'email',
+        icon: MailIcon,
+        heading:'Имейл',
+        url: 'mailto:pamteks94.bg',
+        urlText: 'pamteks94.bg'
+    },
+    {
+        id:4,
+        label:'work_hours',
+        icon: ClockIcon,
+        heading: 'Работно време',
+        listItems: [
+            {
+                id:1,
+                text: 'Понеделник – Петък: 10:00 – 19:00'
+            },
+            {
+                id:2,
+                text:'Събота: 10:00 – 14:00'
+            },
+            {
+                id:3,
+                text: 'Неделя: почивен ден'
+            }
+        ],
+        text: 'Поръчки по телефон - В рамките на работният ден Онлайн заявки - по всяко време.'
+    }
+]
