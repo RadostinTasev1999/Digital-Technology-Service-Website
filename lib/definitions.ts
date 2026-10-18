@@ -360,14 +360,40 @@ export type FooterListData = {
     Icon: JSX.Element
 }
 
-export type ContactCardProps = {
-    contactCards: ContactCards
-    contactForm: ContactForm
-    quickContact: QuickContact,
-    formInputs: FormInputs
+export type ContactCardsProps = {
+    contactCardHeading: ContactHeadingProps,
+    contactCardsData: ContactCardData
 }
 
-type FormInputs = {
+export type ContactHeadingProps = {
+    heading: string,
+    text: string
+}
+
+export type FormSectionData = {
+    formInputs: FormInputs,
+    contactForm: ContactForm
+
+}
+// ContactCardsData types
+type ContactCardData = {
+    id:number,
+    label: string,
+    icon: React.FC,
+    heading: string,
+    text?: string,
+    url?: string,
+    urlText?: string,
+    urlIcon?: React.FC
+    listItems?: ContactListData
+}[]
+
+type ContactListData = {
+    id:number,
+    text: string
+}[]
+
+ type FormInputs = {
     nameInput: FormInputData,
     emailInput: FormInputData,
     phoneInput: FormInputData,
@@ -379,7 +405,7 @@ type FormInputData = {
     label: string,
     placeholder: string,
     name: string,
-    type: string,
+    type?: string,
     value?: OptionValues 
     rows?: number
 }
@@ -493,4 +519,20 @@ type ContactQuickList = {
 export type ContactQuickItemData = {
     text: string,
     Icon: JSX.Element
+}
+
+
+export type ContactCardItemProps = {
+    label: string,
+    Icon: JSX.Element,
+    heading: string,
+    text?: string,
+    url?: string,
+    urlText?: string,
+    UrlIcon?: JSX.Element,
+    listItems?: ContactListData
+}
+
+export type CardItemData = {
+    text: string
 }
