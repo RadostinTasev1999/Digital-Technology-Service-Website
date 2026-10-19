@@ -2,10 +2,10 @@ import HeroBadge from '@/components/homepage/hero/HeroBadge'
 import HeroHeading from '@/components/homepage/hero/HeroHeading'
 import HeroDescription from '@/components/homepage/hero/HeroDescription'
 import HeroCtaButtons from '@/components/homepage/hero/HeroCta'
-import HeroLogoCard from '@/components/homepage/hero/HeroLogoCard'
-import HeroServiceCard from '@/components/homepage/hero/HeroServiceCard'
-import HeroLongCard from '@/components/homepage/hero/HeroLongCard'
+import Image from 'next/image'
+
 import HeroStatistics from '@/components/homepage/hero/HeroStatistics'
+
 
 import { Divider } from 'rsuite'
 
@@ -58,29 +58,17 @@ export default function AppHero({
                         />
                 </div>
                 {/* Right side */}
-                <div id='right-column' className="relative">
-                    <div className="flex flex-wrap gap-4">
-                        {/* Business logo card */}
-                        <HeroLogoCard 
-                            heroLogoCard={heroLogoCard}
-                            />
+                <div id='right-column' className='flex-1 w-full max-w-2xl min-w-sm mx-auto'>
+                    <div id='image' className=''>
+                        <Image 
+                        src="/TvImageLatest.jpg"
+                        alt="TvBackgroundImage"
+                        width={600}
+                        height={300}
+                        className='object-fill rounded-3xl border-4 border-slate-300'
                         
-                        {
-                            heroServiceCards.map((card) => (
-                                <HeroServiceCard
-                                    key={card.id}
-                                    heroServiceCard={card}
-                                    />
-                            ))
-                        }
-
-                        {/* Long Card */}
-                        <HeroLongCard 
-                            heroLongCard={heroLongCard}
-                            />
-                        
+                    />
                     </div>
-
                 </div>
             </div>
             {/* Divider */}
@@ -94,3 +82,28 @@ export default function AppHero({
         </section>
     )
 }
+
+/*
+    <div className="flex flex-wrap gap-4">
+                        
+                        <HeroLogoCard 
+                            heroLogoCard={heroLogoCard}
+                            />
+                        
+                        {
+                            heroServiceCards.map((card) => (
+                                <HeroServiceCard
+                                    key={card.id}
+                                    heroServiceCard={card}
+                                    />
+                            ))
+                        }
+
+                      
+                        <HeroLongCard 
+                            heroLongCard={heroLongCard}
+                            />
+                        
+                    </div>
+*/
+
