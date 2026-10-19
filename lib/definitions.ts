@@ -217,10 +217,22 @@ type NavLinks = {
 }
 
 type HeroText = {
-    badge: string,
+    badges: HeroBadge,
+    slashIcon: React.FC,
     heading: string,
     description: string
 }
+
+export type ServiceBadgeData = {
+    serviceBadges: HeroBadge,
+    SlashIcon: JSX.Element
+}
+
+type HeroBadge = {
+    id:number,
+    text:string
+}[]
+
 type HeroBtnData = {
     url: string,
     text: string
@@ -232,7 +244,6 @@ export type HeroMiniNavData = {
 }
 
 export type HeroServiceHeading = {
-    serviceBadge: string,
     serviceHeading: string,
     serviceDescription: string
 }
@@ -259,6 +270,11 @@ type ServiceDescHeading = {
 
 type ServiceDescText = {
     text: string
+}
+
+export type BadgeItemData = {
+    text:string,
+    id:number
 }
 
 export type HeroServiceDescLeft = {
@@ -535,4 +551,8 @@ export type ContactCardItemProps = {
 
 export type CardItemData = {
     text: string
+}
+
+export type IconProp = {
+    className: string
 }
