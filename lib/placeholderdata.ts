@@ -10,6 +10,7 @@ import MailIcon from '@/components/ui/MailIcon'
 import ClickIcon from '@/components/ui/ClickIcon'
 import ClockIcon from '@/components/ui/ClockIcon'
 import ArrowUpRight from '@/components/ui/ArrowUpRight'
+import SlashIcon from '@/components/ui/SlashIcon'
 
 
 export const navItems = [
@@ -50,7 +51,7 @@ export const navActionData = {
 export const heroSectionData = {
     badgeText: "Памтекс 94 ООД София",
     heroHeading: {
-        txt1:"Ремонт и Диагностика на извънгаранционна",
+        txt1:"Ремонт и Диагностика на",
         txt2:"Аудио и Видео техника."
     },
     heroDescription: "Сервиз Памтекс 94 ООД извършва ремонт и диагностика на Телевизионна, Аудио и Видео техника в София.",
@@ -187,7 +188,29 @@ export const laptopIntroData = {
         serviceType: 'Ремонт на лаптоп'
     },
     text: {
-        badge: 'Лаптопи',
+        badges: [
+            {
+                id:1,
+                text: 'Lenovo'
+            },
+            {
+                id:2,
+                text: 'DELL'
+            },
+            {
+                id:3,
+                text: 'HP'
+            },
+            {
+                id:4,
+                text: 'Acer'
+            },
+            {
+                id:5,
+                text: 'ASUS'
+            }
+        ],
+        slashIcon:SlashIcon,
         heading: 'Ремонт на лаптопи',
         description: 'Памтекс 94 ООД извършва ремонт и диагностика на лаптопи за частни клиенти и малки бизнеси в София. Работим върху хардуерни проблеми - батерия, охлаждане, дисплей, клавиатура. Преди извършване на ремонт, правим диагностика и информираме в детайли вариантите за ремонт.'
     },
@@ -305,7 +328,29 @@ export const tvIntroData = {
         serviceType: 'Ремонт на телевизори'
     },
     text: {
-        badge: 'Телевизори',
+        badges: [
+            {
+                id:1,
+                text: 'Samsung'
+            },
+            {
+                id:2,
+                text: 'Sony'
+            },
+            {
+                id:3,
+                text: 'LG'
+            },
+            {
+                id:4,
+                text: 'Phillips'
+            },
+            {
+                id:5,
+                text: 'TCL'
+            }
+        ],
+        slashIcon: SlashIcon,
         heading: 'Ремонт на телевизори',
         description: 'Памтекс 94 ООД извършва диагностика и ремонт на телевизори за частни клиенти и малки бизнеси в София. Работим върху проблеми с картина, звук, връзка с интернет, инсталиране на приложения и свързване с външни устройства като декодери, плейъри и звукови системи.'
     },
@@ -547,7 +592,29 @@ export const monitorData = {
         serviceType: 'Монитори'
     },
     text: {
-        badge: 'Монитори',
+        badges: [
+            {
+                id:1,
+                text: 'Samsung'
+            },
+            {
+                id:2,
+                text: 'DELL'
+            },
+            {
+                id:3,
+                text: 'LG'
+            },
+            {
+                id:4,
+                text: 'Philips'
+            },
+            {
+                id:5,
+                text: 'HP'
+            }
+        ],
+        slashIcon: SlashIcon,
         heading: 'Ремонт на монитори',
         description: 'Памтекс 94 ООД извършва ремонт и диагностика на монитори за частни клиенти и малки бизнеси в София. Работим върху хадруерни проблеми - захранване, екран, подсветка, прегряване. Преди извършване на ремонт, правим диагностика и информираме в детайли вариантите за ремонт'
     },
