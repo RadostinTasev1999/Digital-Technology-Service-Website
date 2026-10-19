@@ -5,7 +5,8 @@ export default function HeroHeading({
 }: HeroHeadingData) {
     return(
         <h1
-            className="text-balance text-4xl font-black leading-[1.05] md:text-5xl"
+            className="tracking-[-1.27872px] text-[51.1488px] font-extrabold leading-[1.02]"
+            // text-balance text-4xl font-black leading-[1.05] md:text-5xl
         >
             {heroHeading.txt1}&nbsp;
             <br />
