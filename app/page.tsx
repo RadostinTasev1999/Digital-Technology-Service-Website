@@ -1,4 +1,7 @@
 import AppHero from "@/components/homepage/hero/Hero";
+import ServiceProcess from '@/components/homepage/service-process/ServiceProcess'
+import { Divider } from "rsuite";
+
 import AppServiceInfo from "@/components/homepage/service-info/ServiceInfo";
 import { heroSectionData } from '@/lib/placeholderdata'
 import { heroStatistics } from '@/lib/placeholderdata'
@@ -29,6 +32,10 @@ export default function Page() {
         description={description}
         serviceCardData={serviceCardData}
         />
+      {/* Divider */}
+      <Divider size="xs" color="#9ac4c6" className="mx-auto max-w-7xl" />
+      {/* Service Process Section */}
+      <ServiceProcess />
       </>
   );
 }
